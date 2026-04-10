@@ -1,0 +1,23 @@
+{
+  "name": "customtron-verify",
+  "version": "1.0.0",
+  "description": "Client-side split-key combination and verification for CustomTron vanity addresses",
+  "main": "combine.js",
+  "scripts": {
+    "test": "node test/combine.test.js",
+    "verify": "node combine.js"
+  },
+  "keywords": [
+    "tron",
+    "vanity-address",
+    "split-key",
+    "secp256k1",
+    "crypto",
+    "blockchain",
+    "trc20"
+  ],
+  "license": "MIT",
+  "optionalDependencies": {
+    "ethereum-cryptography": "^2.2.1"
+  }
+}

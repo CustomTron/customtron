@@ -280,14 +280,12 @@ const CustomTronCrypto = (() => {
 
   // ── Session storage ───────────────────────────────────────────
   const SESSION_KEY = 'ct_client_priv'
-  function savePrivKeyToSession(h) { try { sessionStorage.setItem(SESSION_KEY, h) } catch {} }
-  function loadPrivKeyFromSession() { try { return sessionStorage.getItem(SESSION_KEY) } catch { return null } }
   function clearPrivKeyFromSession() { try { sessionStorage.removeItem(SESSION_KEY) } catch {} }
 
   // ── Main flow ─────────────────────────────────────────────────
   async function step2GenerateKeys() {
     const { privKey, pubKey } = await generateKeyPair()
-    // savePrivKeyToSession(privKey) — disabled: zero-storage policy
+    // zero-storage policy: Generation Private Key is never persisted
     return { privKey, pubKey }
   }
 
@@ -322,7 +320,7 @@ const CustomTronCrypto = (() => {
   return {
     generateKeyPair, decryptServerPriv, combinePrivateKeys, deriveTronAddress,
     verifyPattern, step2GenerateKeys, step5CombineKeys,
-    savePrivKeyToSession, loadPrivKeyFromSession, clearPrivKeyFromSession,
+    clearPrivKeyFromSession,
     selfTest, hexToBytes, bytesToHex, base58Encode,
   }
 })()

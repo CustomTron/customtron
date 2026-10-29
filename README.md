@@ -6,6 +6,14 @@ CustomTron generates personalized TRON addresses (e.g. `TALEX…`, `…8888`) us
 
 ---
 
+**Website:** https://customtron.com  
+**Try it:** [Free browser generator (1–3 chars)](https://customtron.com/free-tron-vanity-address-generator.html) · [Paid GPU search (4–8 chars)](https://customtron.com/)  
+**Read:** [Is a vanity generator safe? — how to verify this code](https://customtron.com/is-tron-vanity-address-safe.html) · [Address poisoning on TRON and how a vanity address helps](https://customtron.com/address-poisoning.html) · [Complete vanity address guide](https://customtron.com/tron-vanity-address-guide.html)
+
+Live files served by the site are verified against [`CHECKSUMS.txt`](CHECKSUMS.txt) on every order page — you can re-check them yourself with the command in the section below.
+
+---
+
 ## Why split-key matters
 
 Most vanity-address services work like this:
